@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAZEEK – Nightshots | JOKER NIGHTLIFE Lingen</title>
+  <meta name="description" content="Fotos: JAZEEK live im Joker Lingen. Galerie vergangener Nächte.">
+    <!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/effects.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<!-- ===== PAGE LOADER ===== -->
+<div id="page-loader" class="page-loader" aria-hidden="true">
+  <div class="page-loader__inner">
+    <img src="../assets/logo/logo.png" alt="Joker Nightlife" class="page-loader__logo">
+    <div class="page-loader__bar-wrap"><div class="page-loader__bar"></div></div>
+    <span class="page-loader__text">Loading</span>
+  </div>
+</div>
+
+<!-- ===== AGE GATE ===== -->
+<div id="age-gate" class="age-gate" role="dialog" aria-modal="true" aria-label="Altersverifikation">
+  <div class="age-gate__box">
+    <img src="../assets/logo/logo.png" alt="Joker Nightlife" class="age-gate__logo">
+    <div class="neon-line" style="margin-inline:auto"></div>
+    <h2 class="age-gate__title">Bist du 18 Jahre alt?</h2>
+    <p class="age-gate__sub">Diese Seite ist nur für Personen ab 18 Jahren.</p>
+    <div class="age-gate__btns">
+      <button id="age-yes" class="btn btn--primary age-gate__yes">Ja, ich bin 18+</button>
+      <button id="age-no"  class="btn btn--ghost  age-gate__no">Nein</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ===== FLOATING TICKET BUTTON ===== -->
+<a href="https://ticketticker.de/events/ak-ausserkontrolle-dbf589" class="float-ticket" id="float-ticket" target="_blank" rel="noopener" aria-label="Tickets kaufen">
+  <span class="float-ticket__shimmer"></span>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg>
+  <span>Tickets</span>
+</a>
+<nav class="navbar scrolled" aria-label="Hauptnavigation">
+  <div class="navbar__inner">
+    <a href="../index.html" class="navbar__logo" aria-label="Joker Nightlife – Startseite">
+      <img src="../assets/logo/logo.png" alt="Joker Nightlife" class="navbar__logo-img">
+    </a>
+    <div class="navbar__links">
+      <a href="../index.html#events">Events</a>
+      <a href="../index.html#location">Locations</a>
+      <a href="../index.html#fotos">Nightshots</a>
+      <a href="../index.html#lounge">VIP</a>
+      <a href="../index.html#infos">Infos</a>
+      <a href="../index.html#contacts">Kontakt</a>
+      <a href="https://ticketticker.de/events/ak-ausserkontrolle-dbf589" class="navbar__ticket" target="_blank" rel="noopener" aria-label="Tickets kaufen">
+        <span class="navbar__ticket-shimmer"></span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+        Tickets
+      </a>
+    </div>
+    <button class="navbar__burger" aria-expanded="false" aria-controls="nav-overlay" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="nav-overlay__header">
+    <button class="nav-overlay__close" aria-label="Menü schließen" id="nav-close">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="nav-overlay__nav" aria-label="Hauptnavigation">
+    <a href="../index.html#events" class="nav-overlay__link">
+      <span class="nav-overlay__num">01</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Events</span>
+        <span class="nav-overlay__desc">Aktuelle Partys &amp; Tickets</span>
+      </span>
+      <span class="nav-overlay__arrow">&#x2192;</span>
+    </a>
+    <a href="../index.html#location" class="nav-overlay__link">
+      <span class="nav-overlay__num">02</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Locations</span>
+        <span class="nav-overlay__desc">7 Areas &amp; Floors</span>
+      </span>
+      <span class="nav-overlay__arrow">&#x2192;</span>
+    </a>
+    <a href="../index.html#fotos" class="nav-overlay__link">
+      <span class="nav-overlay__num">03</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Nightshots</span>
+        <span class="nav-overlay__desc">Bilder der letzten N&#228;chte</span>
+      </span>
+      <span class="nav-overlay__arrow">&#x2192;</span>
+    </a>
+    <a href="../index.html#lounge" class="nav-overlay__link">
+      <span class="nav-overlay__num">04</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">VIP</span>
+        <span class="nav-overlay__desc">Lounges &amp; exklusive Bereiche</span>
+      </span>
+      <span class="nav-overlay__arrow">&#x2192;</span>
+    </a>
+    <a href="../index.html#infos" class="nav-overlay__link">
+      <span class="nav-overlay__num">05</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Infos</span>
+        <span class="nav-overlay__desc">Eintritt, &#214;ffnungszeiten &amp; mehr</span>
+      </span>
+      <span class="nav-overlay__arrow">&#x2192;</span>
+    </a>
+    <a href="../index.html#contacts" class="nav-overlay__link">
+      <span class="nav-overlay__num">06</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Kontakt</span>
+        <span class="nav-overlay__desc">Schreib uns direkt</span>
+      </span>
+      <span class="nav-overlay__arrow">&#x2192;</span>
+    </a>
+  </nav>
+
+  <div class="nav-overlay__bottom">
+    <a href="https://ticketticker.de/events/ak-ausserkontrolle-dbf589" class="nav-overlay__ticket-btn" target="_blank" rel="noopener" aria-label="Tickets kaufen">
+      <span class="nav-overlay__ticket-shimmer"></span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+      <span class="nav-overlay__ticket-text">
+        <span class="nav-overlay__ticket-label">Tickets kaufen</span>
+        <span class="nav-overlay__ticket-sub">N&#228;chste Veranstaltung</span>
+      </span>
+      <svg class="nav-overlay__ticket-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="nav-overlay__social">
+      <a href="https://www.instagram.com/joker_lingen/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@jokerlingen" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.84 4.84 0 01-1.07-.1z"/></svg>
+        TikTok
+      </a>
+      <a href="https://www.facebook.com/discothekjoker/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</div>
+<main>
+  <section class="nightshot-hero section section--dark">
+    <div class="container" style="text-align:center">
+      <a href="../index.html#fotos" class="back-link" style="justify-content:center">Alle Nightshots</a>
+      
+      <h1>JAZEEK</h1>
+      <div class="neon-line" style="margin-inline:auto"></div>
+    </div>
+  </section>
+  <section class="section section--mid">
+    <div class="container">
+      <div class="gallery-grid">
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/1m4a3645.jpg"><img src="../assets/images/nightshots/jazeek/1m4a3645.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/1m4a3879.jpg"><img src="../assets/images/nightshots/jazeek/1m4a3879.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/1m4a4362.jpg"><img src="../assets/images/nightshots/jazeek/1m4a4362.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/1m4a4413.jpg"><img src="../assets/images/nightshots/jazeek/1m4a4413.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/1m4a4683.jpg"><img src="../assets/images/nightshots/jazeek/1m4a4683.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3486.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3486.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3495.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3495.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3506.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3506.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3514.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3514.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3577.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3577.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3583.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3583.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3593.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3593.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3656.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3656.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3661.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3661.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3664.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3664.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3686.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3686.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3693.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3693.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3719.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3719.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3745.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3745.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3757.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3757.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3808.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3808.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3824.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3824.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3832.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3832.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3839.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3839.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3846.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3846.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3943.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3943.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3954.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3954.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3960.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3960.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3971.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3971.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>
+      <div class="gallery-item" data-full="../assets/images/nightshots/jazeek/5m4a3981.jpg"><img src="../assets/images/nightshots/jazeek/5m4a3981.jpg" alt="JAZEEK Joker Lingen" loading="lazy"></div>      </div>
+      <div style="margin-top:var(--sp-lg);text-align:center">
+        <a href="../index.html#fotos" class="btn btn--outline">← Alle Nightshots</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container"><div class="footer__inner">
+  <a href="../index.html" class="footer__logo">JOKER<span>.</span></a>
+  <nav class="footer__links" aria-label="Rechtliches"><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../disclaimer.html">Disclaimer</a></nav>
+  <p class="footer__copy">&copy; <span class="js-year">2026</span> Joker Music Hall · Lingen</p>
+</div></div></footer>
+<script src="../js/main.js" defer></script><script src="../js/lightbox.js" defer></script>
+<script src="../js/effects.js" defer></script>
+</body>
+</html>

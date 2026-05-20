@@ -1,0 +1,62 @@
+:root {
+  /* Colors */
+  --clr-bg:        #070410;
+  --clr-bg-card:   #0d0920;
+  --clr-bg-mid:    #0a0718;
+  --clr-bg-glass:  rgba(13, 9, 32, 0.7);
+  --clr-primary:   #ff2dd4;
+  --clr-secondary: #22e1ff;
+  --clr-accent:    #7b2fff;
+  --clr-text:      #f0edff;
+  --clr-muted:     #8a7db8;
+  --clr-subtle:    #3d3560;
+  --clr-border:    rgba(255,255,255,0.06);
+  --clr-border-hot: rgba(255,45,212,0.25);
+  --clr-overlay:   rgba(7,4,16,0.95);
+
+  /* Glow */
+  --glow-primary:   0 0 25px rgba(255,45,212,0.6), 0 0 60px rgba(255,45,212,0.2);
+  --glow-secondary: 0 0 25px rgba(34,225,255,0.6), 0 0 60px rgba(34,225,255,0.2);
+  --glow-accent:    0 0 25px rgba(123,47,255,0.6), 0 0 60px rgba(123,47,255,0.2);
+  --glow-soft:      0 8px 40px rgba(255,45,212,0.15), 0 2px 8px rgba(0,0,0,0.4);
+
+  /* Typography */
+  --ff-display: 'Bebas Neue', sans-serif;
+  --ff-body:    'Inter', sans-serif;
+
+  --fs-hero:   clamp(4rem, 12vw, 10rem);
+  --fs-h1:     clamp(2.8rem, 7vw, 6rem);
+  --fs-h2:     clamp(2rem, 4.5vw, 3.5rem);
+  --fs-h3:     clamp(1.3rem, 2.5vw, 1.9rem);
+  --fs-body:   clamp(0.9rem, 1.4vw, 1.05rem);
+  --fs-small:  0.8125rem;
+  --fs-xs:     0.72rem;
+
+  --lh-tight:  1.05;
+  --lh-body:   1.7;
+
+  /* Spacing */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  2rem;
+  --sp-lg:  4rem;
+  --sp-xl:  7rem;
+  --sp-xxl: 12rem;
+
+  /* Layout */
+  --max-width: 1320px;
+  --nav-h:     136px;
+
+  /* Transitions */
+  --t-fast:    120ms cubic-bezier(0.4,0,0.2,1);
+  --t-normal:  280ms cubic-bezier(0.4,0,0.2,1);
+  --t-slow:    520ms cubic-bezier(0.16,1,0.3,1);
+  --t-spring:  600ms cubic-bezier(0.34,1.56,0.64,1);
+
+  /* Border radius */
+  --r-sm:   6px;
+  --r-md:   14px;
+  --r-lg:   24px;
+  --r-xl:   40px;
+  --r-pill: 999px;
+}

@@ -1,0 +1,114 @@
+{
+  "base_url": "https://www.joker-nightlife.de",
+  "notes": "Vollständige Liste aller Original-Assets der bestehenden Website. Das Script download-assets.sh nutzt diese Datei, um alle Bilder + den Muttizettel in die lokale Ordnerstruktur zu laden. Die URL-Suffixe '?crc=...' werden beim Download als Cache-Buster mitgegeben (sonst antwortet der Server teils mit 403/falscher Datei).",
+  "logo": {
+    "_note": "Die alte Seite verwendet kein klassisches Logo als einzelne Bilddatei, sondern Schrift-Grafiken (Headlines) als PNG. Diese werden als Logo-Ersatz behandelt.",
+    "headline_02": "/images/headline_02.png?crc=57415336",
+    "headline_04": "/images/headline_04.png?crc=3945834621",
+    "headline_05": "/images/headline_05.png?crc=320416854",
+    "headline_06": "/images/headline_6.png?crc=19436710",
+    "headline_08": "/images/headline_08.png?crc=4081723196"
+  },
+  "documents": {
+    "muttizettel": "/assets/erziehungsbeauftragung_disco_joker.pdf"
+  },
+  "locations": {
+    "_note": "Vorschaubilder der 7 Areas auf der Startseite.",
+    "jolly_preview": "/images/jolly391x250.jpg?crc=124846721",
+    "main_preview": "/images/main.jpg?crc=4114006513",
+    "swing_preview": "/images/swing.jpg?crc=496789577",
+    "black_preview": "/images/black.jpg?crc=112827740",
+    "outdoor_preview": "/images/outdoor.jpg?crc=514452969",
+    "cocktailbar_preview": "/images/cocktailbar.jpg?crc=4071065088",
+    "beach_preview": "/images/beach2.jpg?crc=3781204933"
+  },
+  "events_preview": {
+    "_note": "Vorschaubilder im Events-Grid auf der Startseite.",
+    "event5_crop": "/images/event5-crop-u292460.jpg?crc=175845552",
+    "event3_crop": "/images/event3-crop-u300668.jpg?crc=4211493977",
+    "event6_crop": "/images/event6-crop-u300688.jpg?crc=370154566",
+    "event7_crop": "/images/event7-crop-u304126.jpg?crc=3777597317",
+    "event10_crop": "/images/event10-crop-u304146.jpg?crc=4291706855",
+    "event1_crop": "/images/event1-crop-u304171.jpg?crc=4187036094",
+    "beach_crop": "/images/beach-crop-u283285.jpg?crc=101479375"
+  },
+  "ui_icons": {
+    "_note": "Icons aus der Bottom-Nav der alten Seite. Nur als optische Referenz – im Redesign durch moderne SVG-Icons ersetzen (z. B. Lucide oder eigene).",
+    "icon_home": "/images/icon_home.png?crc=4240880537",
+    "icon_about": "/images/icon_about.png?crc=116867378",
+    "icon_location": "/images/icon_location.png?crc=308103103",
+    "icon_media": "/images/icon_media.png?crc=394101677",
+    "icon_vip": "/images/icon_vip.png?crc=3986899952",
+    "icon_infos": "/images/icon_infos.png?crc=4008769050",
+    "icon_map": "/images/icon_map.png?crc=209158682",
+    "icon_contacts": "/images/icon_contacts.png?crc=349553300",
+    "icon_merch": "/images/icon_merch.png?crc=337236858",
+    "facebook2": "/images/facebook2.png?crc=4224426765",
+    "insta2": "/images/insta2.png?crc=296107649",
+    "snap2": "/images/snap2.png?crc=314075870",
+    "facebook_02": "/images/facebook_02.jpg?crc=4220542126",
+    "instagram_02": "/images/instagram_02.jpg?crc=59374463",
+    "snapchat_02": "/images/snapchat_02.jpg?crc=4217990487",
+    "down_arrow_gray": "/images/down_arrow_gray.png?crc=3948237111",
+    "menu_btn_rollover": "/images/menu_btn_rollover.png?crc=3844641290",
+    "menu_btn_active": "/images/menu_btn_active.png?crc=3782759646",
+    "slide_left_2": "/images/slide_left_2.jpg?crc=240596981",
+    "slide_right_2": "/images/slide_right_2.jpg?crc=292975418"
+  },
+  "nightshots_previews": {
+    "_note": "Vorschau-Thumbnails für die Nightshots-/Artist-Sektion auf der Startseite.",
+    "vorschau_yury2": "/images/vorschau_yury2.jpg?crc=3816740656",
+    "vorschau2": "/images/vorschau2.jpg?crc=4144075281",
+    "vorschau22": "/images/vorschau22.jpg?crc=277405291",
+    "vorschau23": "/images/vorschau23.jpg?crc=4137396393",
+    "vorschau24": "/images/vorschau24.jpg?crc=3980170467",
+    "vorschau25": "/images/vorschau25.jpg?crc=333136867",
+    "vorschau_ak2": "/images/vorschau_ak2.jpg?crc=184799785",
+    "vorschau_jazeek2": "/images/vorschau_jazeek2.jpg?crc=479874328",
+    "vorschau26": "/images/vorschau26.jpg?crc=4283774242",
+    "vorschau27": "/images/vorschau27.jpg?crc=3812032596",
+    "vorschau9": "/images/vorschau9.jpg?crc=451325738",
+    "vorschau29": "/images/vorschau29.jpg?crc=486306516",
+    "vorschau210": "/images/vorschau210.jpg?crc=4109764150",
+    "vorschau211": "/images/vorschau211.jpg?crc=48381253",
+    "vorschau212": "/images/vorschau212.jpg?crc=4018274541"
+  },
+  "nightshots_galleries": {
+    "_note": "Foto-Galerien pro Künstler/Event – jede Galerie wird in einen eigenen Unterordner geladen. Die Liste enthält die explizit aus den Quell-HTMLs extrahierten Bild-URLs.",
+    "yung-yury": {
+      "title": "Yung Yury Live",
+      "date": "2023-07-14",
+      "url": "/yung-yury.html",
+      "thumb_pattern": "/images/4m4a* und /images/5m4a*",
+      "note": "Galerie enthält ca. 170 Fotos im Schema /images/{4m4a|5m4a}NNNN-crop-uNNNN.jpg. Das Download-Script lädt ALLE im HTML referenzierten Bilder."
+    },
+    "juliansommer": {
+      "title": "Julian Sommer – Blau wie der Ozean",
+      "date": "2023-06-09",
+      "url": "/juliansommer.html"
+    },
+    "ak": { "title": "AK Ausser Kontrolle", "url": "/ak.html" },
+    "jazeek": { "title": "Jazeek", "url": "/jazeek.html" },
+    "gzuz": { "title": "Gzuz", "url": "/gzuz.html" },
+    "summer-cem": { "title": "Summer Cem", "url": "/summer-cem.html" },
+    "azet": { "title": "Azet", "url": "/azet.html" },
+    "mish": { "title": "Mish", "url": "/mish.html" },
+    "kc-rebell": { "title": "KC Rebell", "url": "/kc-rebell.html" },
+    "breitner": { "title": "Breitner", "url": "/breitner.html" },
+    "heat": { "title": "Heat", "url": "/heat.html" },
+    "isi": { "title": "Isi Glück Live", "date": "2024-09-27", "url": "/isi.html" },
+    "tweekaz": { "title": "Da Tweekaz", "date": "2025-03-08", "url": "/tweekaz.html" },
+    "noisetime": { "title": "Noisetime", "date": "2025-10-24", "url": "/noisetime.html" },
+    "1-euro-maerz": { "title": "Die legendäre 1€ Party", "date": "2026-03-28", "url": "/1-euro-m%c3%a4rz.html" }
+  },
+  "location_galleries": {
+    "_note": "Die Location-Detailseiten zeigen Innenraum-Fotos. Die einzelnen Datei-URLs werden vom Download-Script direkt aus den Original-HTMLs extrahiert (siehe download-assets.sh).",
+    "jolly": "/location_jolly.html",
+    "main": "/location_main.html",
+    "swing": "/location_swing.html",
+    "black": "/location_black.html",
+    "outdoor": "/location_outdoor.html",
+    "cocktailbar": "/location_cocktailbar.html",
+    "beach": "/location_beach.html"
+  }
+}

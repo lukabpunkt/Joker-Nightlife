@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOKER NIGHTLIFE | Deine Partyadresse in Lingen</title>
+  <meta name="description" content="Seit über 35 Jahren – die Diskothek Joker in Lingen. 7 Areas mit EDM, House, HipHop, Schlager, Techno und mehr. Jeden Freitag & Samstag ab 22 Uhr.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.joker-nightlife.de/">
+  <meta property="og:title"       content="JOKER NIGHTLIFE | Lingen">
+  <meta property="og:description" content="Seit über 35 Jahren deine Partyadresse in Lingen. 7 Areas – ein Abend.">
+  <meta property="og:image"       content="assets/images/nightshots/noisetime/8z2a9055.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="JOKER NIGHTLIFE | Lingen">
+  <meta name="twitter:description" content="Seit über 35 Jahren deine Partyadresse in Lingen.">
+  <meta name="twitter:image"       content="assets/images/nightshots/noisetime/8z2a9055.jpg">
+
+  <!-- JSON-LD NightClub Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NightClub",
+    "name": "Joker Music Hall",
+    "description": "Diskothek in Lingen seit über 35 Jahren, 7 Areas.",
+    "url": "https://www.joker-nightlife.de",
+    "telephone": "+49-172-4327351",
+    "email": "info@joker-nightlife.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Schwarzer Weg 20",
+      "addressLocality": "Lingen",
+      "postalCode": "49809",
+      "addressCountry": "DE"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 52.5192, "longitude": 7.3323 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",   "opens": "22:00", "closes": "05:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "22:00", "closes": "05:00" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/discothekjoker/",
+      "https://www.instagram.com/joker_lingen/",
+      "https://story.snapchat.com/s/joker_lingen",
+      "https://www.tiktok.com/@jokerlingen"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===== PAGE LOADER ===== -->
+<div id="page-loader" class="page-loader" aria-hidden="true">
+  <div class="page-loader__inner">
+    <img src="assets/logo/logo.png" alt="Joker Nightlife" class="page-loader__logo">
+    <div class="page-loader__bar-wrap"><div class="page-loader__bar"></div></div>
+    <span class="page-loader__text">Loading</span>
+  </div>
+</div>
+
+<!-- ===== AGE GATE ===== -->
+<div id="age-gate" class="age-gate" role="dialog" aria-modal="true" aria-label="Altersverifikation">
+  <div class="age-gate__box">
+    <img src="assets/logo/logo.png" alt="Joker Nightlife" class="age-gate__logo">
+    <div class="neon-line" style="margin-inline:auto"></div>
+    <h2 class="age-gate__title">Bist du 18 Jahre alt?</h2>
+    <p class="age-gate__sub">Diese Seite ist nur für Personen ab 18 Jahren.</p>
+    <div class="age-gate__btns">
+      <button id="age-yes" class="btn btn--primary age-gate__yes">Ja, ich bin 18+</button>
+      <button id="age-no"  class="btn btn--ghost  age-gate__no">Nein</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FLOATING TICKET BUTTON ===== -->
+<a href="https://ticketticker.de/events/ak-ausserkontrolle-dbf589" class="float-ticket" id="float-ticket" target="_blank" rel="noopener" aria-label="Tickets kaufen">
+  <span class="float-ticket__shimmer"></span>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg>
+  <span>Tickets</span>
+</a>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner hidden" role="region" aria-label="Cookie-Hinweis">
+  <p>Diese Website verwendet keine Tracking-Cookies – nur technisch notwendige Daten. <a href="datenschutz.html">Mehr erfahren</a></p>
+  <button class="btn btn--primary cookie-accept" style="white-space:nowrap">OK</button>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" aria-label="Hauptnavigation">
+  <div class="navbar__inner">
+    <a href="#top" class="navbar__logo" aria-label="Joker Nightlife – Startseite">
+      <img src="assets/logo/logo.png" alt="Joker Nightlife" class="navbar__logo-img">
+    </a>
+    <div class="navbar__links">
+      <a href="#events">Events</a>
+      <a href="#location">Locations</a>
+      <a href="#fotos">Nightshots</a>
+      <a href="#lounge">VIP</a>
+      <a href="#infos">Infos</a>
+      <a href="#contacts">Kontakt</a>
+      <a href="https://ticketticker.de/events/ak-ausserkontrolle-dbf589" class="navbar__ticket" target="_blank" rel="noopener" aria-label="Tickets kaufen">
+        <span class="navbar__ticket-shimmer"></span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+        Tickets
+      </a>
+    </div>
+    <button class="navbar__burger" aria-expanded="false" aria-controls="nav-overlay" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+<div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="nav-overlay__header">
+    <button class="nav-overlay__close" aria-label="Menü schließen" id="nav-close">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="nav-overlay__nav" aria-label="Hauptnavigation">
+    <a href="#events" class="nav-overlay__link">
+      <span class="nav-overlay__num">01</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Events</span>
+        <span class="nav-overlay__desc">Aktuelle Partys &amp; Tickets</span>
+      </span>
+      <span class="nav-overlay__arrow">→</span>
+    </a>
+    <a href="#location" class="nav-overlay__link">
+      <span class="nav-overlay__num">02</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Locations</span>
+        <span class="nav-overlay__desc">7 Areas &amp; Floors</span>
+      </span>
+      <span class="nav-overlay__arrow">→</span>
+    </a>
+    <a href="#fotos" class="nav-overlay__link">
+      <span class="nav-overlay__num">03</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Nightshots</span>
+        <span class="nav-overlay__desc">Bilder der letzten Nächte</span>
+      </span>
+      <span class="nav-overlay__arrow">→</span>
+    </a>
+    <a href="#lounge" class="nav-overlay__link">
+      <span class="nav-overlay__num">04</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">VIP</span>
+        <span class="nav-overlay__desc">Lounges &amp; exklusive Bereiche</span>
+      </span>
+      <span class="nav-overlay__arrow">→</span>
+    </a>
+    <a href="#infos" class="nav-overlay__link">
+      <span class="nav-overlay__num">05</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Infos</span>
+        <span class="nav-overlay__desc">Eintritt, Öffnungszeiten &amp; mehr</span>
+      </span>
+      <span class="nav-overlay__arrow">→</span>
+    </a>
+    <a href="#contacts" class="nav-overlay__link">
+      <span class="nav-overlay__num">06</span>
+      <span class="nav-overlay__text">
+        <span class="nav-overlay__name">Kontakt</span>
+        <span class="nav-overlay__desc">Schreib uns direkt</span>
+      </span>
+      <span class="nav-overlay__arrow">→</span>
+    </a>
+  </nav>
+
+  <div class="nav-overlay__bottom">
+    <a href="https://ticketticker.de/events/ak-ausserkontrolle-dbf589" class="nav-overlay__ticket-btn" target="_blank" rel="noopener" aria-label="Tickets kaufen">
+      <span class="nav-overlay__ticket-shimmer"></span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+      <span class="nav-overlay__ticket-text">
+        <span class="nav-overlay__ticket-label">Tickets kaufen</span>
+        <span class="nav-overlay__ticket-sub">Nächste Veranstaltung</span>
+      </span>
+      <svg class="nav-overlay__ticket-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="nav-overlay__social">
+      <a href="https://www.instagram.com/joker_lingen/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@jokerlingen" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.84 4.84 0 01-1.07-.1z"/></svg>
+        TikTok
+      </a>
+      <a href="https://www.facebook.com/discothekjoker/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="top" class="hero" aria-label="Hero">
+  <video class="hero__video-bg" autoplay muted loop playsinline aria-hidden="true">
+    <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero__video-overlay" aria-hidden="true"></div>
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow">Schwarzer Weg 20 &middot; Lingen &middot; seit 1989</p>
+    <h1 class="hero__title">
+      <span class="line-block">SEIT ÜBER</span>
+      <span class="line-pink">35 JAHREN</span>
+      <span class="line-outline">DEINE PARTY</span>
+      <span class="line-block">ADRESSE</span>
+    </h1>
+    <p class="hero__subtitle">
+      7 Areas. Jeden Freitag &amp; Samstag ab 22 Uhr. EDM, House, HipHop, Schlager, Techno &amp; mehr – alles unter einem Dach.
+    </p>
+    <div class="hero__ctas">
+      <a href="#events" class="hero-cta hero-cta--primary">
+        <span class="hero-cta__shimmer"></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span>Aktuelle Events</span>
+        <svg class="hero-cta__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#location" class="hero-cta hero-cta--outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        <span>Die 7 Areas</span>
+        <svg class="hero-cta__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero__badge">
+      <span class="dot"></span>
+      <span>Nächstes Highlight:</span>
+      <strong><a href="events/ak-live.html">AK AUSSER KONTROLLE Live &rarr;</a></strong>
+    </div>
+  </div>
+
+  <a href="#events" class="hero__scroll" aria-label="Nach unten scrollen">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </a>
+
+  <!-- Stats bar -->
+  <div class="hero__stats" aria-label="Fakten">
+    <div class="hero__stat">
+      <svg class="hero__stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span class="hero__stat-num" data-target="35" data-suffix="+">0+</span>
+      <span class="hero__stat-label">Jahre Erfahrung</span>
+    </div>
+    <div class="hero__stat">
+      <svg class="hero__stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <span class="hero__stat-num" data-target="7" data-suffix="">0</span>
+      <span class="hero__stat-label">Einzigartige Areas</span>
+    </div>
+    <div class="hero__stat">
+      <svg class="hero__stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span class="hero__stat-num">Fr &amp; Sa</span>
+      <span class="hero__stat-label">Geöffnet</span>
+    </div>
+    <div class="hero__stat">
+      <svg class="hero__stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <span class="hero__stat-num">22:00</span>
+      <span class="hero__stat-label">Einlass ab</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <!-- repeated twice for seamless loop -->
+    <span class="marquee-item">FR &amp; SA AB 22 UHR <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SCHWARZER WEG 20 · LINGEN <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SEIT 1989 <span class="marquee-dot"></span></span>
+    <span class="marquee-item">7 AREAS <span class="marquee-dot"></span></span>
+    <span class="marquee-item">JOKER NIGHTLIFE <span class="marquee-dot"></span></span>
+    <span class="marquee-item">EDM · HOUSE · HIPHOP · SCHLAGER <span class="marquee-dot"></span></span>
+    <span class="marquee-item">FR &amp; SA AB 22 UHR <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SCHWARZER WEG 20 · LINGEN <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SEIT 1989 <span class="marquee-dot"></span></span>
+    <span class="marquee-item">7 AREAS <span class="marquee-dot"></span></span>
+    <span class="marquee-item">JOKER NIGHTLIFE <span class="marquee-dot"></span></span>
+    <span class="marquee-item">EDM · HOUSE · HIPHOP · SCHLAGER <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ===== EVENTS ===== -->
+<section id="events" class="section section--mid">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:var(--sp-lg)">
+      <div>
+        <span class="section-label reveal">Aktuelle Events</span>
+        <h2 class="section-title reveal" style="margin-bottom:0">Was geht ab?</h2>
+      </div>
+      <p class="reveal" style="margin:0;font-size:var(--fs-xs);letter-spacing:0.12em;text-transform:uppercase;color:var(--clr-muted)">Klicke für mehr Infos</p>
+    </div>
+
+    <div class="events-grid stagger">
+
+      <!-- 1€ Party – featured -->
+      <article class="event-card" data-date="2026-06-27">
+        <a href="events/1-euro-maerz.html" aria-label="Die legendäre 1€ Party – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/1-euro-maerz/5m4a4005.jpg" alt="1€ Party Joker Lingen" width="900" height="506">
+            <span class="event-card__date pill pill--primary">Sa, 28.03.2026</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">DIE LEGENDÄRE 1€ PARTY</h3>
+            <p class="event-card__subtitle">Das Kult-Event – alle Drinks für 1 Euro die ganze Nacht</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- The Saints -->
+      <article class="event-card">
+        <a href="events/the-saints.html" aria-label="Harder Styles mit The Saints – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/noisetime/8z2a9055.jpg" alt="Harder Styles Event Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--secondary">Sommer-Highlight</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">HARDER STYLES mit THE SAINTS</h3>
+            <p class="event-card__subtitle">Early Bird 2 € &middot; CO₂-Kanonen &middot; XXL-Konfetti</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Forever Young -->
+      <article class="event-card">
+        <a href="events/forever-young.html" aria-label="Forever Young – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/isi/5m4a9504.jpg" alt="Forever Young Party Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--primary">Ab 25 bis 00 Uhr frei</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">FOREVER YOUNG!</h3>
+            <p class="event-card__subtitle">2000er &amp; 2010er in der Mainhall &middot; 90er in der Swing</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Sturmfrei -->
+      <article class="event-card">
+        <a href="events/sturmfrei-lingen.html" aria-label="Sturmfrei Lingen – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/1-euro-maerz/5m4a4416.jpg" alt="Sturmfrei Lingen" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--primary">400× Freier Eintritt</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">STURMFREI LINGEN</h3>
+            <p class="event-card__subtitle">Hausparty-Vibes &middot; Gratis Pizza &middot; Beerpong</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Abicardi -->
+      <article class="event-card" data-date="2026-05-30">
+        <a href="events/abicardi.html" aria-label="Abicardi – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/kc-rebell/5m4a7193.jpg" alt="Abicardi Abi-Party Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--secondary">Sa, 30.05.2026</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">ABICARDI – HAUPTSACHE RUM!</h3>
+            <p class="event-card__subtitle">Größtes Abi-Event der Region &middot; Welcome Shot &middot; Karaoke</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Doppel 1€ -->
+      <article class="event-card">
+        <a href="events/doppel-1-euro.html" aria-label="Doppel-1€-Party – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/breitner/5m4a2132.jpg" alt="Doppel 1€ Party Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--primary">Sa, 30.05.2026</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">DOPPEL-1€-PARTY</h3>
+            <p class="event-card__subtitle">Alle Getränke bis 02 Uhr für 1 € &middot; Einlass ab 21 Uhr</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Casino Night -->
+      <article class="event-card">
+        <a href="events/casino-night.html" aria-label="Casino Night – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/breitner/5m4a1817.jpg" alt="Casino Night Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--secondary">Eintritt würfeln!</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">CASINO NIGHT</h3>
+            <p class="event-card__subtitle">Groupiers &middot; Chips &middot; Passendes Outfit = Gratis-Drink</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- AK Live -->
+      <article class="event-card">
+        <a href="events/ak-live.html" aria-label="AK Ausser Kontrolle Live – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/ak/5m4a14322.jpg" alt="AK Ausser Kontrolle Live Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--primary">Live Act &middot; Tickets online</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">AK AUSSER KONTROLLE LIVE</h3>
+            <p class="event-card__subtitle">Platz 2 der Charts &middot; Auftritt ca. 01:30 Uhr</p>
+            <span class="event-card__cta">Tickets sichern <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Club 40 -->
+      <article class="event-card">
+        <a href="events/club-40.html" aria-label="Club 40 – mehr erfahren">
+          <div class="event-card__img-wrap">
+            <img src="assets/images/nightshots/noisetime/8z2a8558-2.jpg" alt="Club 40 Ü40-Party Joker" loading="lazy" width="600" height="337">
+            <span class="event-card__date pill pill--secondary">Einlass ab 40</span>
+          </div>
+          <div class="event-card__body">
+            <h3 class="event-card__title">CLUB 40</h3>
+            <p class="event-card__subtitle">Sektempfang &middot; 4 Tanzbereiche &middot; Tickets online</p>
+            <span class="event-card__cta">Mehr erfahren <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+
+    </div><!-- /events-grid -->
+
+    <div class="muttizettel-hint reveal" style="margin-top:var(--sp-lg)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--clr-secondary);flex-shrink:0" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <p>Noch keine 18? <a href="assets/docs/erziehungsbeauftragung_disco_joker.pdf" target="_blank" rel="noopener"><strong>Muttizettel herunterladen (PDF) →</strong></a></p>
+    </div>
+  </div>
+</section>
+
+<div class="section-cut section-cut--mid-dark" aria-hidden="true"></div>
+<!-- ===== LOCATIONS ===== -->
+<section id="location" class="section section--dark">
+  <div class="container">
+    <div style="max-width:600px;margin-bottom:var(--sp-lg)">
+      <span class="section-label reveal">Die 7 Areas</span>
+      <h2 class="section-title reveal">Für jeden Geschmack</h2>
+      <p class="reveal">In unseren 7 Bereichen feiern wir zu EDM, House, Black, HipHop, Charts, Schlager und den Klassikern – alles in stilvollem Ambiente.</p>
+    </div>
+
+    <div class="locations-grid stagger">
+      <a href="locations/jolly.html" class="location-card" aria-label="Area JOLLY – Galerie ansehen">
+        <img src="assets/images/locations/jolly-preview.jpg" alt="Joker Area Jolly" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">JOLLY</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">JOLLY</span>
+          <span class="location-card__genre">Techno / Hardtechno</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+      <a href="locations/mainhall.html" class="location-card" aria-label="Area MAINHALL – Galerie ansehen">
+        <img src="assets/images/locations/main-preview.jpg" alt="Joker Mainhall" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">MAINHALL</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">MAINHALL</span>
+          <span class="location-card__genre">House / Charts / EDM</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+      <a href="locations/swing.html" class="location-card" aria-label="Area SWING – Galerie ansehen">
+        <img src="assets/images/locations/swing-preview.jpg" alt="Joker Swing Area" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">SWING</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">SWING</span>
+          <span class="location-card__genre">Schlager / 90er / 2000er</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+      <a href="locations/black.html" class="location-card" aria-label="Area BLACK – Galerie ansehen">
+        <img src="assets/images/locations/black-preview.jpg" alt="Joker Black Area" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">BLACK</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">BLACK</span>
+          <span class="location-card__genre">HipHop / RnB / Dancehall</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+      <a href="locations/outdoor.html" class="location-card" aria-label="Area OUTDOOR – Galerie ansehen">
+        <img src="assets/images/locations/outdoor-preview.jpg" alt="Joker Outdoor Area" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">OUTDOOR</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">OUTDOOR</span>
+          <span class="location-card__genre">Open Air &middot; Mainhall-Musik</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+      <a href="locations/cocktailbar.html" class="location-card" aria-label="Area COCKTAILBAR – Galerie ansehen">
+        <img src="assets/images/locations/cocktailbar-preview.jpg" alt="Joker Cocktailbar" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">COCKTAILBAR</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">COCKTAILBAR</span>
+          <span class="location-card__genre">Café &amp; Cocktails</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+      <a href="locations/beach.html" class="location-card" aria-label="Area BEACH – Galerie ansehen">
+        <img src="assets/images/locations/beach-preview.jpg" alt="Joker Beach Area" loading="lazy" width="400" height="400">
+        <div class="location-card__overlay" aria-hidden="true"></div>
+        <span class="location-card__name">BEACH</span>
+        <div class="location-card__panel" aria-hidden="true">
+          <span class="location-card__panel-name">BEACH</span>
+          <span class="location-card__genre">Sommer-Vibes / Beach</span>
+          <span class="btn btn--outline" style="font-size:var(--fs-xs);padding:0.6em 1.4em">Galerie ansehen</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NIGHTSHOTS ===== -->
+<section id="fotos" class="section section--mid">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:var(--sp-lg)">
+      <div>
+        <span class="section-label reveal">Live-Momente</span>
+        <h2 class="section-title reveal" style="margin-bottom:0">Vergangene Nächte</h2>
+      </div>
+    </div>
+
+    <div class="nightshots-slider reveal">
+      <div class="nightshots-track" role="list">
+
+        <div class="nightshots-thumb" data-href="nightshots/yung-yury.html" role="listitem">
+          <img src="assets/images/nightshots/yung-yury/5m4a7851.jpg" alt="Yung Yury" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">YUNG YURY</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/juliansommer.html" role="listitem">
+          <img src="assets/images/nightshots/juliansommer/5m4a0441.jpg" alt="Julian Sommer" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">JULIAN SOMMER</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/ak.html" role="listitem">
+          <img src="assets/images/nightshots/ak/5m4a14322.jpg" alt="AK Ausser Kontrolle" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">AK</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/jazeek.html" role="listitem">
+          <img src="assets/images/nightshots/jazeek/5m4a4633.jpg" alt="Jazeek" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">JAZEEK</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/gzuz.html" role="listitem">
+          <img src="assets/images/nightshots/gzuz/gzuz2_00139.jpg" alt="Gzuz" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">GZUZ</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/summer-cem.html" role="listitem">
+          <img src="assets/images/nightshots/summer-cem/5m4a1824.jpg" alt="Summer Cem" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">SUMMER CEM</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/azet.html" role="listitem">
+          <img src="assets/images/nightshots/azet/5m4a6742.jpg" alt="Azet" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">AZET</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/mish.html" role="listitem">
+          <img src="assets/images/nightshots/mish/5m4a06732.jpg" alt="Mish" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">MISH</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/kc-rebell.html" role="listitem">
+          <img src="assets/images/nightshots/kc-rebell/5m4a6583.jpg" alt="KC Rebell" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">KC REBELL</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/breitner.html" role="listitem">
+          <img src="assets/images/nightshots/breitner/5m4a2134.jpg" alt="Breitner" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">BREITNER</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/heat.html" role="listitem">
+          <img src="assets/images/nightshots/heat/8z2a9858.jpg" alt="Heat" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">HEAT</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/isi.html" role="listitem">
+          <img src="assets/images/nightshots/isi/5m4a9934.jpg" alt="Isi Glück" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">ISI GLÜCK</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/tweekaz.html" role="listitem">
+          <img src="assets/images/nightshots/tweekaz/81be640e-717e-426b-a7e2-dc9520340dc7.jpg" alt="Da Tweekaz" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">DA TWEEKAZ</span>
+        </div>
+        <div class="nightshots-thumb" data-href="nightshots/noisetime.html" role="listitem">
+          <img src="assets/images/nightshots/noisetime/8z2a9284.jpg" alt="Noisetime" loading="lazy" width="210" height="315">
+          <span class="nightshots-thumb__label">NOISETIME</span>
+        </div>
+
+      </div>
+      <div class="slider-nav" aria-label="Slider-Navigation">
+        <button class="slider-btn slider-btn--prev" aria-label="Zurück">&#8592;</button>
+        <button class="slider-btn slider-btn--next" aria-label="Weiter">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-cut section-cut--dark-mid" aria-hidden="true"></div>
+<!-- ===== VIP LOUNGES ===== -->
+<section id="lounge" class="section section--dark">
+  <div class="container">
+    <div style="max-width:600px;margin-bottom:var(--sp-lg)">
+      <span class="section-label reveal">Exklusiv feiern</span>
+      <h2 class="section-title reveal">VIP Lounges &amp; Dein Bereich</h2>
+    </div>
+    <div class="vip-grid">
+      <article class="vip-card reveal">
+        <h3>SEI VIP</h3>
+        <p>Genieße deinen Abend in einer unserer exklusiven VIP Lounges – ob Geburtstag, Junggesellenabschied, Vereinsfeier oder ein besonderer Abend mit Freunden.</p>
+        <div class="vip-card__meta">
+          <div class="vip-card__meta-item">Gebühr: <strong>10 € / Lounge</strong></div>
+          <div class="vip-card__meta-item">Mindestverzehr: <strong>10 € / Person</strong></div>
+        </div>
+        <a href="mailto:info@joker-nightlife.de?subject=VIP-Lounge-Anfrage" class="btn btn--primary">Lounge anfragen</a>
+      </article>
+      <article class="vip-card reveal reveal-delay-1">
+        <h3>DEIN BEREICH – JOLLY</h3>
+        <p>Der Jolly wurde 2023 komplett erneuert – perfekt für 90–250 Personen. Mit eigener Theke, Tanzfläche, Lichtanlage und Toiletten alles an einem Ort.</p>
+        <div class="vip-card__meta">
+          <div class="vip-card__meta-item">Kapazität: <strong>90–250 Personen</strong></div>
+          <div class="vip-card__meta-item">Getränke: <strong>über Joker</strong></div>
+        </div>
+        <a href="mailto:info@joker-nightlife.de?subject=Privatvermietung Jolly" class="btn btn--outline">Bereich anfragen</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="section-cut section-cut--mid-dark" aria-hidden="true"></div>
+<!-- ===== INFOS ===== -->
+<section id="infos" class="section section--mid">
+  <div class="container" style="max-width:900px">
+    <span class="section-label reveal">Alles Wissenswerte</span>
+    <h2 class="section-title reveal">Infos</h2>
+    <div class="accordion reveal">
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-muttizettel">
+          Muttizettel
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-panel" id="acc-muttizettel" role="region">
+          <div class="accordion-inner">
+            <p>Aufgrund des Jugendschutzgesetzes müssen Personen unter 18 Jahren zum Besuch von Veranstaltungen nach 00:00 Uhr durch eine erziehungsbeauftragte Person beaufsichtigt werden.</p>
+            <p style="margin-top:var(--sp-sm)"><a href="assets/docs/erziehungsbeauftragung_disco_joker.pdf" target="_blank" rel="noopener" class="btn btn--secondary" style="display:inline-flex;margin-top:0.5em;padding:0.65em 1.4em">PDF herunterladen</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-einlass">
+          Einlasskriterien <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-panel" id="acc-einlass" role="region">
+          <div class="accordion-inner">
+            <p>Grundsätzlich wird an unserer Tür niemand abgewiesen. Das Joker lehnt jede Art der Diskriminierung ab. Geltungssüchtige, aggressive oder stark alkoholisierte Personen erhalten keinen Einlass. Das Mitbringen von Getränken, Waffen oder Betäubungsmitteln ist untersagt.</p>
+            <p><strong>Bitte gültigen Ausweis bereithalten</strong> (Personalausweis, Reisepass oder Führerschein mit Foto).</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-oeffnung">
+          Öffnungstage <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-panel" id="acc-oeffnung" role="region">
+          <div class="accordion-inner">
+            <p>Das Joker hat <strong>jeden Freitag und Samstag ab 22:00 Uhr</strong> geöffnet. In den Ferien und vor Feiertagen finden teilweise zusätzliche Veranstaltungen statt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-fundsachen">
+          Fundsachen <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-panel" id="acc-fundsachen" role="region">
+          <div class="accordion-inner">
+            <p>Anfragen über unser Kontaktformular oder unter <a href="tel:+491724327351">0172 / 432 73 51</a>. Wir sind jeden <strong>Montag um 19 Uhr</strong> für Fundsachen und Jacken beim Joker.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-dresscode">
+          Dresscode <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-panel" id="acc-dresscode" role="region">
+          <div class="accordion-inner">
+            <p>Einen genauen Dresscode zu definieren ist unmöglich, da das Joker viele verschiedene Menschen anspricht. Demonstriert mit eurem Outfit, dass ihr euch auf einen besonderen Abend vorbereitet habt. Schicke Schuhe sind genauso gerne gesehen wie saubere Sneakers oder Chucks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-foto">
+          Fotoaufnahmen &amp; Videoüberwachung <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-panel" id="acc-foto" role="region">
+          <div class="accordion-inner">
+            <p>Mit dem Betreten erklärt sich der Gast damit einverstanden, abgelichtet oder gefilmt werden zu können und dass diese Aufnahmen im Internet und ggf. im Druck veröffentlicht werden. Verschiedene Bereiche werden videoüberwacht – ein Hinweis befindet sich im Eingangsbereich.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ANFAHRT ===== -->
+<section id="anfahrt" class="section section--dark">
+  <div class="container">
+    <span class="section-label reveal">So findet ihr uns</span>
+    <h2 class="section-title reveal">Anfahrt</h2>
+    <div class="anfahrt-grid">
+      <div class="anfahrt-info reveal">
+        <h3>JOKER MUSIC HALL</h3>
+        <div class="contact-detail">
+          <span class="icon" aria-hidden="true">📍</span>
+          <address style="font-style:normal">Schwarzer Weg 20<br>49809 Lingen</address>
+        </div>
+        <div class="contact-detail">
+          <span class="icon" aria-hidden="true">📞</span>
+          <a href="tel:+491724327351">0172 / 432 73 51</a>
+        </div>
+        <div class="contact-detail">
+          <span class="icon" aria-hidden="true">✉️</span>
+          <a href="mailto:info@joker-nightlife.de">info@joker-nightlife.de</a>
+        </div>
+        <div class="contact-detail">
+          <span class="icon" aria-hidden="true">🕙</span>
+          <span>Fr &amp; Sa ab 22:00 Uhr &middot; vor Feiertagen</span>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/discothekjoker/"  target="_blank" rel="noopener" class="btn btn--ghost" style="padding:0.55em 1em;font-size:var(--fs-xs)">Facebook</a>
+          <a href="https://www.instagram.com/joker_lingen/"   target="_blank" rel="noopener" class="btn btn--ghost" style="padding:0.55em 1em;font-size:var(--fs-xs)">Instagram</a>
+          <a href="https://story.snapchat.com/s/joker_lingen" target="_blank" rel="noopener" class="btn btn--ghost" style="padding:0.55em 1em;font-size:var(--fs-xs)">Snapchat</a>
+          <a href="https://www.tiktok.com/@jokerlingen"       target="_blank" rel="noopener" class="btn btn--ghost" style="padding:0.55em 1em;font-size:var(--fs-xs)">TikTok</a>
+        </div>
+      </div>
+      <div class="map-wrapper reveal reveal-delay-1" role="region" aria-label="Interaktive Karte">
+        <iframe
+          src="https://maps.google.com/maps?q=Schwarzer+Weg+20,+49809+Lingen&output=embed&hl=de&z=16"
+          title="Karte Joker Lingen"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section id="contacts" class="section section--mid">
+  <div class="container" style="max-width:680px">
+    <span class="section-label reveal">Schreib uns</span>
+    <h2 class="section-title reveal">Kontakt</h2>
+    <form class="contact-form reveal" novalidate aria-label="Kontaktformular">
+      <div class="honeypot" aria-hidden="true">
+        <label>Nicht ausfüllen <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="f-name">Name *</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required aria-required="true" placeholder="Dein Name">
+          <span class="err-msg" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="f-email">E-Mail *</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required aria-required="true" placeholder="deine@email.de">
+          <span class="err-msg" role="alert"></span>
+        </div>
+        <div class="form-group full">
+          <label for="f-message">Nachricht *</label>
+          <textarea id="f-message" name="message" required aria-required="true" placeholder="Deine Nachricht…"></textarea>
+          <span class="err-msg" role="alert"></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary" style="margin-top:var(--sp-md)">ABSENDEN</button>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a href="#top" class="footer__logo" aria-label="Joker Nightlife – nach oben">
+        <img src="assets/logo/logo.png" alt="Joker Nightlife" class="footer__logo-img">
+      </a>
+      <nav class="footer__social" aria-label="Social Media">
+        <a href="https://www.facebook.com/discothekjoker/"  target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/joker_lingen/"   target="_blank" rel="noopener">Instagram</a>
+        <a href="https://story.snapchat.com/s/joker_lingen" target="_blank" rel="noopener">Snapchat</a>
+        <a href="https://www.tiktok.com/@jokerlingen"       target="_blank" rel="noopener">TikTok</a>
+      </nav>
+      <nav class="footer__links" aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+      <p class="footer__copy">&copy; <span class="js-year">2026</span> Joker Music Hall &middot; Schwarzer Weg 20 &middot; 49809 Lingen</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/lightbox.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/form.js" defer></script>
+<script src="js/effects.js" defer></script>
+</body>
+</html>
