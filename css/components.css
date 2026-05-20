@@ -3,11 +3,12 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  height: var(--nav-h);
+  /* Extend behind iOS status bar / notch */
+  padding-top: env(safe-area-inset-top);
+  height: calc(var(--nav-h) + env(safe-area-inset-top));
   display: flex;
   align-items: center;
   padding-inline: clamp(1.25rem, 5vw, 3.5rem);
-  /* GPU-compositing: verhindert iOS Safari Subpixel-Gap */
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   transition: background var(--t-normal), box-shadow var(--t-normal), backdrop-filter var(--t-normal);
