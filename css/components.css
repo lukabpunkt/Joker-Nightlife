@@ -7,13 +7,25 @@
   display: flex;
   align-items: center;
   padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+  /* GPU-compositing: verhindert iOS Safari Subpixel-Gap */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transition: background var(--t-normal), box-shadow var(--t-normal), backdrop-filter var(--t-normal);
 }
 .navbar.scrolled {
-  background: rgba(7,4,16,0.88);
+  background: rgba(7,4,16,0.97);
   box-shadow: 0 1px 0 var(--clr-border), 0 8px 32px rgba(0,0,0,0.5);
   backdrop-filter: blur(20px) saturate(1.5);
   -webkit-backdrop-filter: blur(20px) saturate(1.5);
+}
+/* Mobile: sofort sichtbarer Hintergrund — kein Gap beim Scrollen */
+@media (max-width: 768px) {
+  .navbar {
+    background: rgba(7,4,16,0.82);
+  }
+  .navbar.scrolled {
+    background: rgba(7,4,16,0.98);
+  }
 }
 .navbar__inner {
   width: 100%;

@@ -10,7 +10,7 @@ const navLinks = document.querySelectorAll('.nav-overlay__link');
 
 if (navbar) {
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
+    navbar.classList.toggle('scrolled', window.scrollY > 5);
   }, { passive: true });
 }
 
